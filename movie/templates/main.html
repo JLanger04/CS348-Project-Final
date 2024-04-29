@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    <h1>Main Page</h1>
+    <ul>
+        <li><a href="{% url 'create_and_rate_movie' %}">Create and Rate Movie</a></li>
+        <li><a href="{% url 'edit_movie' %}">Edit Movie</a></li>
+        <li><a href="{% url 'delete_movie' %}">Delete Movie</a></li>
+        <li><a href="{% url 'report_movie' %}">Report</a></li>
+    </ul>
+</body>
+</html>

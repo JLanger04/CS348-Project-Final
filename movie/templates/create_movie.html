@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Rate Movie</title>
+</head>
+<body>
+    <h1>Create and Rate Movie</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div>
+            {{ form.title.label_tag }}
+            <br>
+            {{ form.title }}
+        </div>
+        <div>
+            {{ form.release_year.label_tag }}
+            <br>
+            {{ form.release_year }}
+        </div>
+        <div>
+            {{ form.duration.label_tag }}
+            <br>
+            {{ form.duration }}
+        </div>
+        <div>
+            {{ form.main_actor.label_tag }}
+            <br>
+            {{ form.main_actor }}
+        </div>
+        <div>
+            {{ form.director.label_tag }}
+            <br>
+            {{ form.director }}
+        </div>
+        <div>
+            <label for="rating">Movie Rating (0-10):</label>
+            <br>
+            <input type="number" id="rating" name="rating" min="0" max="10">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
